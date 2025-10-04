@@ -66,6 +66,5 @@ Este projeto foi criado pela equipe **CTRL + Farroups** durante o **NASA Space A
     cd nasa
 
 3. Abra o arquivo index.html em seu navegador ou utilize uma extensão como o Live Server para um ambiente local mais completo.
-    ```bash
 
 Nota: Como o projeto utiliza dados externos e chamadas de API, algumas funcionalidades podem depender de permissões ou chaves de API configuradas previamente.
