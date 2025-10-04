@@ -7,7 +7,7 @@
 
 **NASA** é uma plataforma interativa desenvolvida durante o **NASA Space Apps Challenge**, com o objetivo de organizar e permitir a exploração de dados científicos relacionados à **possibilidade de vida no universo**.
 
-O site funciona como um **banco de dados e ferramenta de pesquisa**, oferecendo informações sobre exoplanetas, ambientes habitáveis, e outros elementos astrobiológicos a partir de fontes confiáveis e dados disponibilizados pela própria NASA, vale ressaltar que estes dados apresentam um enfoque grande na Terra, em Marte e na Lua.
+O site funciona como um **banco de dados e ferramenta de pesquisa**, oferecendo informações sobre planetas, satélites, ambientes habitáveis, e outros elementos astrobiológicos próximos à Terra a partir de fontes confiáveis e dados disponibilizados pela própria NASA, vale ressaltar que estes dados apresentam um enfoque grande na Terra, em Marte e na Lua.
 
 O projeto busca tornar o conhecimento científico mais acessível e visual, contribuindo com a divulgação científica e o interesse pelo espaço.
 
