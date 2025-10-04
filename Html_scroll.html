@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard - Eu te amo</title>
+  <style>
+    /* Reset simples */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root{
+      --bg: #0f172a;      /* azul escuro */
+      --card: #111827;    /* painel */
+      --accent: #ff6b81;  /* rosa */
+      --muted: #94a3b8;   /* texto secundário */
+      --glass: rgba(255,255,255,0.03);
+      --radius: 12px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    html,body{height:100%;}
+    body{
+      min-height:100vh;
+      background: linear-gradient(180deg,#071024 0%, #0b1330 100%);
+      color: #e6eef8;
+      padding: 20px;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* Layout de dashboard */
+    .dashboard{
+      display:grid;
+      grid-template-columns: 240px 1fr 320px;
+      gap: 20px;
+      align-items:start;
+      max-width:1200px;
+      margin: 0 auto;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.04);
+      padding: 18px;
+      border-radius: var(--radius);
+      box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+    }
+
+    header.site-header{
+      grid-column: 1 / -1;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap: 16px;
+    }
+
+    .brand{
+      display:flex;gap:12px;align-items:center;
+    }
+    .logo{
+      width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ff9aa2);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:16px;
+      box-shadow: 0 6px 18px rgba(255,107,129,0.12);
+    }
+    .title{font-size:18px;font-weight:600}
+    .subtitle{font-size:12px;color:var(--muted)}
+
+    /* sidebar */
+    nav.sidebar{min-height:360px}
+    nav.sidebar ul{list-style:none;margin-top:14px}
+    nav.sidebar li{padding:10px 12px;border-radius:8px;cursor:pointer;color:var(--muted);margin-bottom:8px}
+    nav.sidebar li:hover{background:var(--glass);color:#fff}
+
+    /* main area */
+    main.content{min-height:480px}
+    .hero{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px
+    }
+    .love-big{
+      font-size:28px;font-weight:800;letter-spacing:-0.02em;color:var(--accent)
+    }
+    .love-small{color:var(--muted);font-size:14px}
+
+    /* seção scrollável exigida pelo usuário */
+    .scrollable-section{
+      height:220px; /* define a altura fixa para mostrar a rolagem */
+      overflow-y:auto;
+      padding-right:8px;
+      border-radius:10px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.008), rgba(255,255,255,0.005));
+    }
+    .scrollable-section p{padding:12px 8px;color:#dfe9f6;line-height:1.5}
+
+    /* cards menores */
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+    /* painel direito */
+    aside.right-panel{min-height:360px}
+    .heart-circle{
+      width:120px;height:120px;border-radius:999px;background:linear-gradient(180deg,#ff7b94, #ff4f6b);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;color:white;margin:0 auto 12px;box-shadow:0 8px 30px rgba(255,75,95,0.16)
+    }
+
+    footer.site-footer{grid-column:1 / -1;margin-top:14px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);padding:12px}
+
+    /* pequenas animações */
+    @keyframes pulse {0%{transform:scale(1)}50%{transform:scale(1.06)}100%{transform:scale(1)}}
+    .pulse{animation:pulse 2.6s infinite}
+
+    /* responsivo */
+    @media (max-width:980px){
+      .dashboard{grid-template-columns: 1fr;}
+      aside.right-panel{order:3}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dashboard">
+
+    <header class="site-header card">
+      <div class="brand">
+        <div class="logo">ET</div>
+        <div>
+          <div class="title">Meu Dashboard</div>
+          <div class="subtitle">Um jeito bonito de dizer: <strong>Eu te amo</strong></div>
+        </div>
+      </div>
+      <div class="meta">
+        <div style="text-align:right">
+          <div style="font-weight:700">Helena</div>
+          <div class="subtitle">Hoje</div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="sidebar card">
+      <h4 style="margin-bottom:8px">Seções</h4>
+      <ul>
+        <li>Visão Geral</li>
+        <li>Mensagens</li>
+        <li class="pulse">Notas do Coração</li>
+        <li>Galeria</li>
+        <li>Configurações</li>
+      </ul>
+    </nav>
+
+    <main class="content card">
+      <div class="hero">
+        <div>
+          <div class="love-big">Eu te amo 💌</div>
+          <div class="love-small">Pequenos lembretes espalhados pelo dashboard.</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:12px;color:var(--muted)">Resumo</div>
+          <div style="font-weight:700;font-size:20px">Sempre e pra sempre</div>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-bottom:12px">
+        <div class="card">
+          <h4>Notas importantes</h4>
+          <p class="subtitle" style="margin-top:8px;color:var(--muted)">Aqui ficam pequenos bilhetes.</p>
+          <div style="margin-top:10px">
+            <div style="font-weight:700">Bilhete 1</div>
+            <div class="subtitle">Nunca esqueça: eu te amo.</div>
+          </div>
+        </div>
+
+        <div class="card scrollable-section">
+          <h4 style="padding:8px 8px 0 8px">Seção Scrollável — Mensagens</h4>
+          <!-- Conteúdo mais longo para ativar a rolagem -->
+          <p>1. Eu te amo desde o primeiro dia.</p>
+          <p>2. Eu amo o seu jeito de rir.</p>
+          <p>3. Obrigado por ser quem você é.</p>
+          <p>4. Hoje lembrei do nosso primeiro café.</p>
+          <p>5. Prometo estar por perto quando você precisar.</p>
+          <p>6. Cada pequeno gesto seu me faz bem.</p>
+          <p>7. Quero construir memórias com você.</p>
+          <p>8. Você é minha paz.</p>
+          <p>9. Te amo agora e sempre.</p>
+          <p>10. Mais mensagens podem aparecer aqui, role para ver todas.</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:8px">
+        <h4>Atividades Recentes</h4>
+        <p class="subtitle" style="margin-top:8px">Uma timeline curtinha</p>
+        <ul style="margin-top:10px;color:var(--muted)">
+          <li>Você me mandou um sorriso — 09:12</li>
+          <li>Você compartilhou uma música — Ontem</li>
+          <li>Planejamos um passeio — 2 dias atrás</li>
+        </ul>
+      </div>
+
+    </main>
+
+    <aside class="right-panel card">
+      <div style="text-align:center">
+        <div class="heart-circle">❤</div>
+        <div style="font-weight:700;text-align:center">Lembrete do Dia</div>
+        <div class="subtitle" style="margin-top:6px">Diga "eu te amo" sem motivo.</div>
+      </div>
+
+      <div style="margin-top:14px">
+        <h4>Pequenas ações</h4>
+        <ol style="color:var(--muted);margin-top:8px">
+          <li>Enviar uma mensagem doce</li>
+          <li>Preparar um café</li>
+          <li>Ouvir a música preferida</li>
+        </ol>
+      </div>
+    </aside>
+
+    <footer class="site-footer card">
+      <div>Feito com carinho • <strong>Eu te amo</strong></div>
+      <div class="subtitle">Um dashboard simples — role a seção central direita para ver mais mensagens</div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Interações simples: highlight no clique
+    document.querySelectorAll('nav.sidebar li').forEach(li => {
+      li.addEventListener('click', () => {
+        document.querySelectorAll('nav.sidebar li').forEach(x => x.style.background='transparent');
+        li.style.background = 'linear-gradient(90deg, rgba(255,107,129,0.12), rgba(255,107,129,0.06))';
+        li.style.color = '#fff';
+      })
+    })
+  </script>
+</body>
+</html>
