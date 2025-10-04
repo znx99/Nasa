@@ -59,3 +59,13 @@ Este projeto foi criado pela equipe **CTRL + Farroups** durante o **NASA Space A
 1. Clone o repositório:
    ```bash
    git clone https://github.com/znx99/Nasa.git
+   
+
+2. Acesse a pasta do projeto:
+    ```bash
+    cd nasa
+
+3. Abra o arquivo index.html em seu navegador ou utilize uma extensão como o Live Server para um ambiente local mais completo.
+    ```bash
+
+Nota: Como o projeto utiliza dados externos e chamadas de API, algumas funcionalidades podem depender de permissões ou chaves de API configuradas previamente.
