@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA SpaceApps Challenge Hackathon</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .main-page {
+      text-align: center;
+      z-index: 999;
+      transition: opacity 0.5s ease-out;
+    }
+
+    .title {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #6e6bff;
+      text-shadow: 0 4px 10px rgba(117, 107, 255, 0.8);
+    }
+
+    .subtitle {
+      font-size: 1.6em;
+      margin-bottom: 30px;
+      color: #fff;
+      font-weight: 400;
+    }
+
+    .spline-container {
+      position: relative;
+      margin-top: 30px;
+      z-index: 1;
+      display: none; /* Inicialmente escondido */
+    }
+
+    .planet-hitbox {
+      position: absolute;
+      background-color: transparent; /* Invisível */
+      cursor: pointer;
+    }
+
+    .earth {
+      top: 30%; 
+      left: 25%;
+      width: 270px;
+      height: 270px;
+      border-radius: 50%;
+    }
+
+    .moon{
+      top: 20%; 
+      left: 48%;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+    }
+
+    .mars {
+      top: 40%; 
+      left: 65%;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+
+    .btn {
+      background-color: #6b84ff;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.4em;
+      border-radius: 12px;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #4343e2;
+      transform: scale(1.05); /* Aumenta um pouco ao passar o mouse */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Página Principal -->
+  <div class="main-page" id="main-page">
+    <div class="title">NASA SPACEAPPS CHALLENGE HACKATHON</div>
+    <div class="subtitle">biolab research tool</div>
+    <button class="btn" onclick="goToResearchTool()">Ir para Ferramenta de Pesquisa</button>
+  </div>
+
+  <!-- Visualizador Spline -->
+  <div class="spline-container" id="spline-viewer-container">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.74/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/M6HRJs84CtKt79D4/scene.splinecode"></spline-viewer>
+
+<!-- Hitboxes Invisíveis sobre os planetas -->
+<div class="planet-hitbox earth" onclick="window.open('https://www.youtube.com/watch?v=VIDEO1', '_blank')"></div>
+<div class="planet-hitbox moon" onclick="window.open('https://www.youtube.com/watch?v=VIDEO2', '_blank')"></div>
+<div class="planet-hitbox mars" onclick="window.open('https://www.youtube.com/watch?v=VIDEO3', '_blank')"></div>
+
+    
+    
+    
+    <!--mudar isso-->
+  
+
+
+
+
+    </div>
+
+  <script>
+    // Função para ir para a seção de ferramenta de pesquisa
+    function goToResearchTool() {
+      const mainPage = document.getElementById("main-page");
+      mainPage.style.opacity = "0";  // Esconde a página inicial com transição suave
+      setTimeout(function() {
+        mainPage.style.display = "none"; // Esconde a página completamente
+        document.getElementById("spline-viewer-container").style.display = "block";  // Mostra o spline-viewer
+      }, 500); // Espera a transição de opacidade terminar antes de esconder a página
+    }
+  </script>
+
+</body>
+</html>
