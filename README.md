@@ -128,17 +128,6 @@ Este projeto foi criado pela equipe **CTRL + Farroups** durante o **NASA Space A
 - **Hospedagem e versionamento:** Git + GitHub ([znx99](https://github.com/znx99))
 
 ---
+## Explicação Tecnica:
+Para implementar a aplicação usamos Selenium em JavaScript para automatizar buscas nos sites da nasa e extrair textos de 608 pesquisas (≈40.000 linhas), priorizamos os abstracts e, quando ausentes, capturamos o texto completo. Consolidamos esses textos em um arquivo .txt que serviu para ajustar um assistente da OpenAI, incluindo prompts que limitam respostas fora do conteúdo disponível e adicionam conhecimentos básicos de ciência espacial. A interface é uma página HTML com um dashboard interativo (planetas que seguem o mouse); ao clicar em um planeta abre-se um painel hospedado no Vercel que exibe informações básicas e um chat. O chat roda no client-side devido ao limite de tempo das requisições na plataforma (cancelamento após ~10s), e a lógica da UI e replicação dos painéis para os demais planetas foi implementada para manter consistência; atualmente cada interação inicia uma nova thread em vez de recuperar histórico por Thread ID.
 
-## Como Executar Localmente
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/znx99/Nasa.git
-   ```
-2. Acesse a pasta do projeto:
-    ```bash
-    cd nasa
-    ```
-3. Abra o arquivo index.html em seu navegador ou utilize uma extensão como o Live Server para um ambiente local mais completo.
-
-Nota: Como o projeto utiliza dados externos e chamadas de API, algumas funcionalidades podem depender de permissões ou chaves de API configuradas previamente.
