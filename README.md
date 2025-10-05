@@ -47,7 +47,7 @@ This project was created by the **CTRL + Farroups** team during the **NASA Space
 
 ## Tools Used
 
-- **Frontend:** HTML, CSS, JavaScript  
+- **Frontend:** HTML, CSS, JavaScript, Lovable, Spline  
 - **Backend:** Vanilla JavaScript  
 - **Database:** Official NASA data  
 - **External APIs:** Vercel, OpenAI  
