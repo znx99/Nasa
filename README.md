@@ -121,7 +121,7 @@ Este projeto foi criado pela equipe **CTRL + Farroups** durante o **NASA Space A
 
 ## Tecnologias Utilizadas
 
-- **Frontend:** HTML, CSS, JavaScript  
+- **Frontend:** HTML, CSS, JavaScript, Lovable, Spline  
 - **Backend:** JavaScript (puro)  
 - **Banco de Dados:** Dados oficiais da NASA  
 - **APIs externas:** Vercel, OpenAI  
