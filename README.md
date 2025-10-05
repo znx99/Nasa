@@ -50,7 +50,7 @@ This project was created by the **CTRL + Farroups** team during the **NASA Space
 - **Backend:** Vanilla JavaScript  
 - **Database:** Official NASA data  
 - **External APIs:** Vercel, OpenAI  
-- **Hosting and version control:** Git + GitHub ([znx99](https://github.com/znx99))
+- **Hosting and version control:** Vercel, Git + GitHub ([znx99](https://github.com/znx99))
 
 ---
 
@@ -124,7 +124,7 @@ Este projeto foi criado pela equipe **CTRL + Farroups** durante o **NASA Space A
 - **Backend:** JavaScript (puro)  
 - **Banco de Dados:** Dados oficiais da NASA  
 - **APIs externas:** Vercel, OpenAI  
-- **Hospedagem e versionamento:** Git + GitHub ([znx99](https://github.com/znx99))
+- **Hospedagem e versionamento:** Vercel, Git + GitHub ([znx99](https://github.com/znx99))
 
 ---
 ## Explicação Tecnica:
