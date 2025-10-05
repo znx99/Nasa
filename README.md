@@ -54,19 +54,19 @@ This project was created by the **CTRL + Farroups** team during the **NASA Space
 
 ---
 
-## How to Run Locally
+Here's the English translation of your technical explanation:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/znx99/Nasa.git
-   ```
-2. Navigate to the project folder:
-   ```bash
-   cd nasa
-   ```
-3. Open the `index.html` file in your browser or use an extension like Live Server for a more complete local environment.
+---
 
-Note: Since the project uses external data and API calls, some features may depend on previously configured permissions or API keys.
+## Technical Explanation:
+
+To implement the application, we used Selenium in JavaScript to automate searches on NASA's websites and extract text from 608 research papers (≈40,000 lines). We prioritized the abstracts and, when those were missing, we captured the full text. We consolidated this text into a `.txt` file, which was used to fine-tune an OpenAI assistant, including prompts that restrict answers to the available content and add basic space science knowledge.
+The interface is an HTML page with an interactive dashboard ; when a planet is clicked, a panel opens (hosted on Vercel) displaying basic information and a chat. The chat runs client-side due to the request timeout limit on the platform (requests are cancelled after ~10s). The UI logic and panel replication for the other planets were implemented to maintain consistency; currently, each interaction starts a new thread instead of retrieving history via Thread ID.
+
+---
+
+Let me know if you'd like help refining this for documentation, a pitch, or another purpose.
+
 
 ---
 ---
@@ -128,5 +128,6 @@ Este projeto foi criado pela equipe **CTRL + Farroups** durante o **NASA Space A
 
 ---
 ## Explicação Tecnica:
+
 Para implementar a aplicação usamos Selenium em JavaScript para automatizar buscas nos sites da nasa e extrair textos de 608 pesquisas (≈40.000 linhas), priorizamos os abstracts e, quando ausentes, capturamos o texto completo. Consolidamos esses textos em um arquivo .txt que serviu para ajustar um assistente da OpenAI, incluindo prompts que limitam respostas fora do conteúdo disponível e adicionam conhecimentos básicos de ciência espacial. A interface é uma página HTML com um dashboard interativo (planetas que seguem o mouse); ao clicar em um planeta abre-se um painel hospedado no Vercel que exibe informações básicas e um chat. O chat roda no client-side devido ao limite de tempo das requisições na plataforma (cancelamento após ~10s), e a lógica da UI e replicação dos painéis para os demais planetas foi implementada para manter consistência; atualmente cada interação inicia uma nova thread em vez de recuperar histórico por Thread ID.
 
