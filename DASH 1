@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vinheta + Dashboard NASA</title>
+  <style>
+    /* ===== RESET E BASE ===== */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      overflow: hidden;
+    }
+
+    /* ===== VINHETA ===== */
+    .vinheta {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 9999;
+      animation: fadeout 1s ease 4s forwards;
+    }
+
+    @keyframes fadeout {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    /* ===== DASHBOARD ===== */
+    .dashboard {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      background: radial-gradient(circle at center, #0a0a10, #000);
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 2rem;
+      width: 300px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      animation: popin 1s ease;
+    }
+
+    @keyframes popin {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Vinheta -->
+  <img
+    src="https://raw.githubusercontent.com/znx99/Nasa/main/MOONGIF.gif"
+    alt="Vinheta NASA"
+    class="vinheta"
+  >
+
+  <!-- Dashboard -->
+  <div class="dashboard" id="dashboard">
+    <div class="card">
+      <h1>🌕 Painel NASA</h1>
+      <p>Bem-vindo ao painel principal do projeto.</p>
+      <p>Dados de missão e status serão carregados aqui.</p>
+    </div>
+  </div>
+
+  <script>
+    // Espera 5 segundos, depois mostra o dashboard
+    setTimeout(() => {
+      document.querySelector('.vinheta').style.display = 'none';
+      const dash = document.getElementById('dashboard');
+      dash.style.display = 'flex';
+      document.body.style.overflow = 'auto'; // libera rolagem se necessário
+    }, 5000);
+  </script>
+</body>
+</html>
