@@ -1,4 +1,3 @@
-https://sistema-ortodontic.vercel.app/teste
 # Build a Space Biology Knowledge Engine  
 **Project developed by the team CTRL + Farroups for the NASA Space Apps Challenge**
 
