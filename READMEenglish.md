@@ -7,15 +7,15 @@
 
 **NASA** is an interactive platform developed during the **NASA Space Apps Challenge**, with the goal of organizing and enabling the exploration of scientific data related to the **possibility of life in the universe**.
 
-The site functions as a **database and research tool**, offering information on planets, satellites, habitable environments, and other astrobiological elements near Earth. These are sourced from reliable references and data provided by NASA itself. It is worth noting that this data focuses primarily on Earth, Mars, and the Moon.
+The site functions as a **database and research tool**, offering information on planets, satellites, habitable environments, and other space biology related facts that relate to Earth. These are sourced from reliable references and data provided by NASA itself. It is worth noting that this data focuses primarily on Earth, Mars, and the Moon.
 
-The project aims to make scientific knowledge more accessible and visual, contributing to science communication and fostering interest in space.
+The project aims to make scientific knowledge more accessible and visual, contributing to science communication and fostering interest in space and biology.
 
 ---
 
 ## Features
 
-- **Search for astrobiological data**  
+- **Search for space-biology data**  
   With the help of chatbots and dashboards featuring information related to Earth, Mars, and the Moon, users can gather information more efficiently and reliably than with a simple language model query or Google search.
 
 - **Display of Earth, Moon, and Mars profiles**  
